@@ -3,7 +3,7 @@ function sumNumbers(arr) {
     arr.forEach(num => {
         sum += num;
     });
-    return sum
+    return sum;
 }
 
 console.log(sumNumbers([1, 4, 8]));
