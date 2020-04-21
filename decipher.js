@@ -3,7 +3,7 @@ function cipher(str, offset) {
     let strArr = [...str];
     for (let i = 0; i < str.length; i++) {
         let ordValue = strArr[i].charCodeAt(0);
-        // Uppercae
+        // Uppercase
         if ((ordValue >= 65) && (ordValue <= 90)) {
             newStr += String.fromCharCode((((ordValue - 65 + offset) % 26) + 65));
         }
