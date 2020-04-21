@@ -3,6 +3,14 @@ function ticTacToe(arr) {
     if (arr[0][0] == arr[0][1] && arr[0][0] == arr[0][2]) {
         return arr[0][0] + " Row 1 across!";
     }
+    // row 2 across
+    else if (arr[1][0] == arr[1][1] && arr[1][0] == arr[1][2]) {
+      return arr[1][0] + " Row 2 across!";
+    }
+    // row 3 across
+    else if (arr[2][0] == arr[2][1] && arr[2][0] == arr[2][2]) {
+        return arr[2][0] + " Row 3 across!";
+    } 
     // column 1 down
     else if (arr[0][0] == arr[1][0] && arr[0][0] == arr[2][0]) {
         return arr[0][0] + " Column 1 down!";
@@ -14,14 +22,6 @@ function ticTacToe(arr) {
     // column 3 down
     else if (arr[0][2] == arr[1][2] && arr[0][1] == arr[2][2]) {
         return arr[0][2] + " Column 3 down!";
-    } 
-    // row 2 across
-    else if (arr[1][0] == arr[1][1] && arr[1][0] == arr[1][2]) {
-        return arr[1][0] + " Row 2 across!";
-    }
-    // row 3 across
-    else if (arr[2][0] == arr[2][1] && arr[2][0] == arr[2][2]) {
-        return arr[2][0] + " Row 3 across!";
     } 
     // diagonal down
     else if (arr[0][0] == arr[1][1] && arr[0][0] == arr[2][2]) {
