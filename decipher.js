@@ -1,18 +1,22 @@
 function cipher(str, offset) {
-    str = str.toLowerCase()
     let newStr = '';
     let strArr = [...str];
     for (let i = 0; i < str.length; i++) {
-        let ordValue = strArr[i].charCodeAt(0) + offset;
-        if (ordValue > 122) {
-            // console.log(ordValue);
-            ordValue = ordValue % 122 + 96;
-            newStr += String.fromCharCode(ordValue);
-        } else {
+        let ordValue = strArr[i].charCodeAt(0);
+        // Uppercae
+        if ((ordValue >= 65) && (ordValue <= 90)) {
+            newStr += String.fromCharCode((((ordValue - 65 + offset) % 26) + 65));
+        }
+        // Lowercase
+        else if ((ordValue >= 97) && (ordValue <= 122)) {
+            newStr += String.fromCharCode((((ordValue - 97 + offset) % 26) + 97));
+        }
+
+        // Spaces 
+        else if (ordValue == 32) {
             newStr += String.fromCharCode(ordValue);
         }
     }
-    newStr = newStr[0].toUpperCase() + newStr.slice(1) + '.';
     console.log(newStr);
 }
 
