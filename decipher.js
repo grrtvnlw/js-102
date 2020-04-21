@@ -11,7 +11,6 @@ function cipher(str, offset) {
         else if ((ordValue >= 97) && (ordValue <= 122)) {
             newStr += String.fromCharCode((((ordValue - 97 + offset) % 26) + 97));
         }
-
         // Spaces 
         else if (ordValue == 32) {
             newStr += String.fromCharCode(ordValue);
